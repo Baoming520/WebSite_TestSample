@@ -1,18 +1,42 @@
-# ReadMe
+# How to use the sample codes
+
+## Prerequisite
+* Install Python 3.x
+* Download the chrome/ie drive which can work with your current browser.
 
 ## Deploy ENV
-* Install Python 3.x
-* Please use the following command to install the required libs:
 
+* Please use the following command to install the necessary modules:
+  
   ```cmd
-  pip install -r requirements.txt
+  $ pip install -r requirements.txt
   ```
-* Chrome drive:  
-  **Please download the appropriate chrome drive by yourself.**
+
+## Configuration
+
+* Config the following parameter by yourself
+  
+  ```json
+  {
+    ...
+    "attempts": 3, 
+    "visit_result": 3, // Visit the third item.
+    ...
+  }
+  ```
 
 ## Usage
 
 * Entrance 1:  
-  main.py: Test for searching a text on baidu.com.
+  main.py: Test for searching a text on the website *https://www.baidu.com/*
+
+  ```cmd
+  $ python main.py
+  ```
+
 * Entrance 2:  
-  img_main.py: Test for searching an image on image.baidu.com.
+  img_main.py: Test for predicting an image on the website *https://image.baidu.com/*
+
+  ```
+  $ python img_main.py
+  ```
