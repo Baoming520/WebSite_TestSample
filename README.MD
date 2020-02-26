@@ -18,10 +18,8 @@
   
   ```json
   {
-    ...
     "attempts": 3, 
-    "visit_result": 3, // Visit the third item.
-    ...
+    "visit_result": 3,
   }
   ```
 
