@@ -1,0 +1,7 @@
+{
+  "web_drive_path": "./drives/chromedriver.exe",
+  "attempts": 3,
+  "visit_result": 3,
+  "screenshots_dir": "./screenshots/",
+  "image_data_dir": "./data/"
+}
