@@ -3,5 +3,8 @@
   "attempts": 3,
   "visit_result": 3,
   "screenshots_dir": "./screenshots/",
-  "image_data_dir": "./data/"
+  "images": [
+    {"image_path": "C:\\Users\\dxl\\Desktop\\Web_TestSuite\\data\\lion.png", "label": "lion 狮子", "category": "animal", "output_file": "C:\\Users\\dxl\\Desktop\\Web_TestSuite\\data\\outputs\\lion_res.png"},
+    {"image_path": "C:\\Users\\dxl\\Desktop\\Web_TestSuite\\data\\lotus.png", "label": "lotus 荷花", "category": "flower", "output_file": "C:\\Users\\dxl\\Desktop\\Web_TestSuite\\data\\outputs\\lotus_res.png"}
+  ]
 }
