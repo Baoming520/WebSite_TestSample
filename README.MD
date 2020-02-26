@@ -7,6 +7,8 @@
   ```cmd
   pip install -r requirements.txt
   ```
+* Chrome drive:  
+  **Please download the appropriate chrome drive by yourself.**
 
 ## Usage
 
