@@ -15,7 +15,7 @@ def validate(v_elem, expectation):
       count += 1
   return count == len(exp_texts)
 
-if __name__ == '__main__':
+def main(argv=None):
   # Read config file
   with open('./config.json', 'r') as f:
     config = json.load(f)
@@ -24,7 +24,6 @@ if __name__ == '__main__':
   # Load Chrome drive
   wd = webdriver.Chrome(config['web_drive_path'])
   wd.get('http://www.baidu.com')
-
 
   # Send text to search box on baidu page.
   s_text = 'Python3 菜鸟教程'
@@ -43,9 +42,17 @@ if __name__ == '__main__':
     if len(elems) > 0:
       break
     loop -= 1
+  
+  if len(elems) == 0:
+    wd.execute_script('window.alert("No result here!")')
+    return
 
   # Validate the specified item (This case is third one)
-  v_elem = elems[config['visit_result']]
+  index = config['visit_result']
+  if index >= len(elems):
+    index = len(elems) - 1
+
+  v_elem = elems[index]
   res = validate(v_elem, s_text)
   if res:
     print('Passed')
@@ -61,3 +68,7 @@ if __name__ == '__main__':
     print('Failed to save the screenshot!')
 
   wd.execute_script('window.alert("Enjoy with Selenium testing!")')
+
+if __name__ == '__main__':
+  main()
+  
